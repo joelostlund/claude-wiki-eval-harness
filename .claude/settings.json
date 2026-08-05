@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(./venv/bin/python -m pytest tests/ evals/ -q -m \"not live\" 2>&1)",
+      "Bash(./venv/bin/python -m pytest tests/ -q 2>&1)",
+      "Bash(./venv/bin/python -m py_compile *)"
+    ]
+  }
+}

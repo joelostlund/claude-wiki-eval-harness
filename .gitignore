@@ -1,0 +1,24 @@
+# Secrets — never commit
+.env
+
+# Wikipedia response cache (regenerated on demand; can be large)
+.wiki_cache/
+
+# NOTE: evals/runs/ is deliberately NOT ignored. Eval run files are the
+# audit trail of prompt iteration cited in docs/DESIGN.md.
+
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.DS_Store
+
+# AI transcripts: emailed to the reviewer, not published.
+# They quote a third party verbatim and mirror whatever hit the terminal.
+convo/
+
+# Written rationale lives in README.md; docs/ is scratch (video script, notes).
+docs/
+
+# Eval run artifacts: local only.
+evals/runs/

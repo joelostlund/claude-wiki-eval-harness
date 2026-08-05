@@ -1,0 +1,17 @@
+# Direct dependencies, pinned to the versions this project was built and
+# verified against (Python 3.14.3). For a byte-exact environment including
+# transitive dependencies, use:  pip install -r requirements.lock.txt
+anthropic==0.120.2
+streamlit==1.61.0
+requests==2.34.2
+pandas==3.0.5
+pydantic==2.13.4
+python-dotenv==1.2.2
+pytest==9.1.1
+
+# Transitive, but pinned deliberately: Streamlit 1.61 subclasses Starlette's
+# GZipResponder, and Starlette 1.4 added a required keyword-only argument that
+# Streamlit does not pass. Letting this float installs 1.4 and every page load
+# dies with `TypeError: GZipResponder.__init__() missing 1 required keyword-only
+# argument: 'thread_minimum_size'`.
+starlette==1.3.1
